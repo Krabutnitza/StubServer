@@ -11,4 +11,5 @@ public class UserModel {
     private String course;
     private String email;
     private Integer age;
+    private Integer score;
 }

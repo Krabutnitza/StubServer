@@ -13,12 +13,12 @@ public class UserService implements IUserService{
     public List<UserModel> getAllUser() {
         return LongStream
                 .range(0,100)
-                .mapToObj(val -> new UserModel(val, "name", "course", "email", 23))
+                .mapToObj(val -> new UserModel(val, "Test user" + val, "QA" + val, "test@" + val + "test.test", 23, 78))
                 .collect(Collectors.toList());
     }
 
     @Override
     public UserModel getUserById(Long id) {
-        return new UserModel(id, "name", "course", "email", 12);
+        return new UserModel(id, "Test user", "QA", "test@test.test", 23, 78);
     }
 }
